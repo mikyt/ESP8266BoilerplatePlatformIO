@@ -15,8 +15,8 @@ class SerialAndBuffer : public Print {
   SerialAndBuffer(Print* printable) : printable_(printable) {}
 
   virtual size_t write(uint8_t character) {
-    printable_->write(character);
-    return buffer_.push(character);
+    buffer_.push(character);
+    return printable_->write(character);
   }
 
   CircularBuffer<uint8_t, max_chars_in_buffer>* GetBuffer() { return &buffer_; }
