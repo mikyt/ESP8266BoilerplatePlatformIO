@@ -4,7 +4,7 @@
 #include <CircularBuffer.h>
 #include <Print.h>
 
-const constexpr size_t max_chars_in_buffer = 1024;
+const constexpr size_t max_chars_in_buffer = 4192;
 using LogBuffer = CircularBuffer<uint8_t, max_chars_in_buffer>;
 
 class SerialAndBuffer : public Print {
