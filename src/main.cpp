@@ -29,7 +29,7 @@ std::unique_ptr<WebInterface> web_interface;
 
 // Prepares the timestamp prefix for the logging library.
 void printTimestamp(Print* _logOutput) {
-  char c[12];
+  char c[14];
   sprintf(c, "[%10lu] ", millis());
   _logOutput->print(c);
 }
